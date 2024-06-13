@@ -84,7 +84,7 @@ const credit = async (req, res, next) => {
               tx_ref: uuidv4(),
               amount: amount,
               currency: "NGN",
-              redirect_url: "http://localhost:3456/",
+              redirect_url: "https://transaction-class-example-grazac.onrender.com/",
               customer: {
                   email: email,
                   phonenumber: phoneNumber,
