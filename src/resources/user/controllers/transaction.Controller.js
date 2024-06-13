@@ -76,6 +76,7 @@ const credit = async (req, res, next) => {
   session.startTransaction();
   try {
     const { amount,email, userName, phoneNumber } = req.body;
+    console.log(req.body);
       const response = await got.post("https://api.flutterwave.com/v3/payments", {
           headers: {
               Authorization: `Bearer ${process.env.FLW_SECRET_KEY}`
