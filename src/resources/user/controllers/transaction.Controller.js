@@ -286,7 +286,7 @@ const flutterwave = async (req, res, next) => {
       return res.status(401).end();
     }
     const { event, data } = req.body;
-
+console.log(req.body);
     if (event === "charge.completed") {
       const email = data.customer.email;
       const { tx_ref, amount, status } = data;
