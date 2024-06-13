@@ -85,7 +85,7 @@ const credit = async (req, res, next) => {
               tx_ref: uuidv4(),
               amount: amount,
               currency: "NGN",
-              redirect_url: "https://transaction-class-example-grazac.onrender.com/",
+              redirect_url: "https://transaction-class-example-grazac.onrender.com/api/v1/transaction/flutter",
               customer: {
                   email: email,
                   phonenumber: phoneNumber,
@@ -280,6 +280,7 @@ const sender = await User.findOne({ userName: senderUsername}).session(session);
 
 const flutterwave = async (req, res, next) => {
   try {
+    console.log("ihugfuyfyfyfyfyfyyy");
     const secretHash = process.env.FLW_SECRET_HASH;
     const signature = req.headers["verif-hash"];
     if (!signature || signature !== secretHash) {
